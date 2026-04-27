@@ -1,7 +1,56 @@
+# =========================
+# Maven / build
+# =========================
 /bin/
+target/
 *.class
-/target/
-# Eclipse
+
+# =========================
+# Eclipse (del profesor)
+# =========================
 .classpath
 .project
 .settings/
+
+# =========================
+# IntelliJ IDEA (añadido)
+# =========================
+.idea/
+*.iml
+
+# =========================
+# VS Code (añadido)
+# =========================
+.vscode/
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Environment variables (IMPORTANTE)
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Maven extras
+# =========================
+*.jar
+*.war
+*.ear
+
+# =========================
+# Docker (si usas CI/CD con imagen)
+# =========================
+docker-compose.override.yml
+*.tar
