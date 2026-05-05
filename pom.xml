@@ -10,9 +10,8 @@
     <version>0.0.2</version>
 
     <name>Spring Boot Examen</name>
-    <description>Proyecto Spring Boot con MariaDB + Docker + CI/CD</description>
+    <description>Spring Boot + MariaDB + Docker + CI/CD</description>
 
-    <!-- Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -20,35 +19,30 @@
         <relativePath/>
     </parent>
 
-    <!-- Java 21 FIJO -->
     <properties>
-        <java.version>21</java.version>
+        <java.version>23</java.version>
+        <maven.compiler.release>23</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- DEPENDENCIAS -->
     <dependencies>
 
-        <!-- Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- JDBC -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <!-- MariaDB -->
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Tests -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -57,26 +51,24 @@
 
     </dependencies>
 
-  <build>
-    <plugins>
+    <build>
+        <plugins>
 
-        <!-- Spring Boot -->
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
 
-        <!-- FORZAR COMPILACIÓN JAVA 21 -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.11.0</version>
-            <configuration>
-                <release>21</release>
-            </configuration>
-        </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>23</release>
+                </configuration>
+            </plugin>
 
-    </plugins>
-</build>
+        </plugins>
+    </build>
+
 </project>
-
