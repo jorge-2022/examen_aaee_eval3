@@ -9,8 +9,8 @@
     <artifactId>aaee_mapamundi</artifactId>
     <version>0.0.2</version>
 
-    <name>Prueba de Spring Boot</name>
-    <description>Proyecto Spring Boot con MariaDB y Docker</description>
+    <name>Spring Boot Examen</name>
+    <description>Proyecto Spring Boot con MariaDB + Docker + CI/CD</description>
 
     <!-- Spring Boot -->
     <parent>
@@ -41,7 +41,7 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <!-- MariaDB driver -->
+        <!-- MariaDB -->
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
@@ -67,14 +67,13 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!--  FIJAR JAVA 21 (evita error 23) -->
+            <!-- ?? FIJAR JAVA 21 (EVITA ERROR 23) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>21</source>
-                    <target>21</target>
+                    <release>21</release>
                 </configuration>
             </plugin>
 
